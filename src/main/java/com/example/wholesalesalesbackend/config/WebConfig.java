@@ -1,5 +1,4 @@
 package com.example.wholesalesalesbackend.config;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -14,9 +13,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**") // Allow all endpoints
-                        // .allowedOrigins("https://arihant-wholesale-shop-frontend.vercel.app") //
-                        // Angular frontend origin
-                        .allowedOrigins("http://localhost:4200") // Angular frontend origin
+                        .allowedOrigins("https://arihant-wholesale-shop-frontend.vercel.app") // Angular frontend origin
                         .allowedMethods("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
@@ -24,4 +21,7 @@ public class WebConfig {
         };
     }
 
+
+    
 }
+
